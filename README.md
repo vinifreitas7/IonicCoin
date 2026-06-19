@@ -37,15 +37,15 @@ Capturas de Tela
 
 Tela Principal
 
-(![home](<Captura de Tela (1).png>))
+![Tela principal](./screenshots/home.png)
 
 Resultado da Conversão
 
-(![conversion](<Captura de Tela (3).png>))
+![Conversão](./screenshots/conversion.png)
 
 Histórico de Conversões
 
-(![history](<Captura de Tela (2).png>))
+![Histórico](./screenshots/history.png)
 
 Autor
 
