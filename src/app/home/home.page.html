@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>IonicCoin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label position="floating">Valor</ion-label>
+    <ion-input
+      type="number"
+      [(ngModel)]="amount">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Origem</ion-label>
+    <ion-select [(ngModel)]="fromCurrency">
+      <ion-select-option
+        *ngFor="let c of currencies"
+        [value]="c">
+        {{ c }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Destino</ion-label>
+    <ion-select [(ngModel)]="toCurrency">
+      <ion-select-option
+        *ngFor="let c of currencies"
+        [value]="c">
+        {{ c }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    (click)="invertCurrencies()">
+    Inverter Moedas
+  </ion-button>
+
+  <ion-button
+    expand="block"
+    (click)="convert()">
+    Converter
+  </ion-button>
+
+  <ion-button
+  expand="block"
+  routerLink="/history">
+  Ver Histórico
+</ion-button>
+
+  <ion-card *ngIf="result">
+
+    <ion-card-header>
+      <ion-card-title>
+        Resultado
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ result | number:'1.2-2' }}
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
